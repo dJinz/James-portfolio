@@ -13,7 +13,7 @@ const Hero = () => {
             <span className="hero-subtitle" style={{ color: 'var(--text-secondary)', fontSize: '2.5rem', display: 'block', marginTop: '0.5rem' }}>UI/UX designer, front end dev and Tech Support</span>
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', marginBottom: '3rem' }}>
-            I'm a designer and developer focused on creating clean, functional, and visually compelling interfaces. Welcome to my digital portfolio.
+            Aspiring to build digital experiences that inspire. I am a passionate designer and developer dedicated to crafting clean, intuitive, and visually stunning interfaces. Welcome to my portfolio.
           </p>
           <div className="hero-buttons" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <a href="#projects" style={{

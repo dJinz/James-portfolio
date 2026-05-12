@@ -1,67 +1,97 @@
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <section id="contact" className="container" style={{ minHeight: '60vh', justifyContent: 'center' }}>
-      <div className="fade-in" style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
-        <h2 className="section-title" style={{ marginBottom: '1.5rem' }}>Contact Me</h2>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: '3rem' }}>
-          I'm currently available for freelance work and new opportunities. If you have a project in mind, need some front-end magic, or just want to chat, I'd absolutely love to work with you!
+    <section id="contact" className="container" style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <div className="fade-in" style={{ width: '100%', maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
+        <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '1rem', color: 'var(--text-primary)' }}>Contact Form</h2>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2.5rem' }}>
+          Please contact me directly at <span style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>jamespvper123@gmail.com</span> or drop your info here.
         </p>
-        
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jamespvper123@gmail.com" target="_blank" rel="noopener noreferrer" style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '0.8rem',
-          padding: '1rem 2rem',
-          backgroundColor: 'transparent',
-          color: 'var(--text-primary)',
-          border: '1px solid var(--text-primary)',
-          fontWeight: 500,
-          borderRadius: '4px',
-          fontSize: '1.1rem',
-          transition: 'all 0.3s ease',
-          marginBottom: '3rem'
-        }} onMouseOver={e => { e.target.style.backgroundColor = 'var(--text-primary)'; e.target.style.color = 'var(--bg-primary)'; }} onMouseOut={e => { e.target.style.backgroundColor = 'transparent'; e.target.style.color = 'var(--text-primary)'; }}>
-          <Mail size={20} />
-          Say Hello
-        </a>
 
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '1rem',
-          marginBottom: '3rem',
-          color: 'var(--text-secondary)',
-          fontSize: '1.05rem'
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-            <Phone size={20} style={{ color: 'var(--text-primary)' }} />
-            <span>09665375692</span>
+        <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1 1 calc(50% - 0.75rem)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <label htmlFor="name" style={{ fontWeight: 'bold', color: 'var(--text-primary)' }}>Full name</label>
+              <input type="text" id="name" placeholder="Your Name" style={{
+                padding: '1rem',
+                borderRadius: '8px',
+                border: '1px solid var(--border-color)',
+                backgroundColor: 'var(--bg-secondary)',
+                color: 'var(--text-primary)',
+                outline: 'none',
+                width: '100%',
+                fontSize: '1rem'
+              }} />
+            </div>
+            <div style={{ flex: '1 1 calc(50% - 0.75rem)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <label htmlFor="email" style={{ fontWeight: 'bold', color: 'var(--text-primary)' }}>Email Address</label>
+              <input type="email" id="email" placeholder="you@example.com" style={{
+                padding: '1rem',
+                borderRadius: '8px',
+                border: '1px solid var(--border-color)',
+                backgroundColor: 'var(--bg-secondary)',
+                color: 'var(--text-primary)',
+                outline: 'none',
+                width: '100%',
+                fontSize: '1rem'
+              }} />
+            </div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-            <MapPin size={20} style={{ color: 'var(--text-primary)' }} />
-            <span>Philippines Davao Davao City</span>
-          </div>
-        </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jamespvper123@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color='var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color='var(--text-secondary)'}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label htmlFor="message" style={{ fontWeight: 'bold', color: 'var(--text-primary)' }}>Your Message</label>
+            <textarea id="message" rows="6" placeholder="Tell me about your project," style={{
+              padding: '1rem',
+              borderRadius: '8px',
+              border: '1px solid var(--border-color)',
+              backgroundColor: 'var(--bg-secondary)',
+              color: 'var(--text-primary)',
+              outline: 'none',
+              width: '100%',
+              resize: 'vertical',
+              fontSize: '1rem'
+            }}></textarea>
+          </div>
+
+
+
+          <button type="submit" style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '0.5rem',
+            padding: '1rem',
+            backgroundColor: 'var(--bg-secondary)',
+            color: 'var(--text-primary)',
+            border: '1px solid var(--border-color)',
+            borderRadius: '8px',
+            fontSize: '1.1rem',
+            fontWeight: 'bold',
+            cursor: 'pointer',
+            transition: 'all 0.2s ease',
+            marginTop: '0.5rem'
+          }} onMouseOver={e => { e.currentTarget.style.backgroundColor = 'var(--text-primary)'; e.currentTarget.style.color = 'var(--bg-primary)'; }} onMouseOut={e => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; e.currentTarget.style.color = 'var(--text-primary)'; }}>
+            Send <Send size={20} />
+          </button>
+        </form>
+
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '4rem' }}>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jamespvper123@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
             <Mail size={24} />
           </a>
-          <a href="#" aria-label="LinkedIn" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color='var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color='var(--text-secondary)'}>
+          <a href="https://www.linkedin.com/in/james-harold-roble-51783b40a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
             <FaLinkedin size={24} />
           </a>
-          <a href="#" aria-label="GitHub" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color='var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color='var(--text-secondary)'}>
+          <a href="https://github.com/dJinz" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
             <FaGithub size={24} />
           </a>
         </div>
-        
-        <p style={{ marginTop: '4rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-          © {new Date().getFullYear()} Roble JH. Built with minimal aesthetics.
+
+        <p style={{ marginTop: '2rem', textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+          © 2026 - Roble JH
         </p>
       </div>
     </section>
