@@ -46,9 +46,12 @@ const Experience = () => {
                           fontSize: '0.85rem',
                           border: '1px solid var(--border-color)',
                           fontWeight: 500,
-                          transition: 'border-color 0.2s ease, background-color 0.2s ease'
+                          transition: 'border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease',
+                          cursor: 'default'
                         }}
                         className="skill-pill"
+                        onMouseOver={e => { e.currentTarget.style.backgroundColor = 'var(--text-primary)'; e.currentTarget.style.color = 'var(--bg-primary)'; }}
+                        onMouseOut={e => { e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
                         >
                           {skill}
                         </span>

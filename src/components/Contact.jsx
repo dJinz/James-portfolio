@@ -11,11 +11,12 @@ const Contact = () => {
           Please contact me directly at <span style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>jamespvper123@gmail.com</span> or drop your info here.
         </p>
 
-        <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        <form action="https://formsubmit.co/jamespvper123@gmail.com" method="POST" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          {/* Prevent redirect to formsubmit captcha page if desired, but by default it redirects. We will let it redirect for simplicity. */}
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 calc(50% - 0.75rem)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <label htmlFor="name" style={{ fontWeight: 'bold', color: 'var(--text-primary)' }}>Full name</label>
-              <input type="text" id="name" placeholder="Your Name" style={{
+              <input type="text" id="name" name="name" required placeholder="Your Name" style={{
                 padding: '1rem',
                 borderRadius: '8px',
                 border: '1px solid var(--border-color)',
@@ -28,7 +29,7 @@ const Contact = () => {
             </div>
             <div style={{ flex: '1 1 calc(50% - 0.75rem)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <label htmlFor="email" style={{ fontWeight: 'bold', color: 'var(--text-primary)' }}>Email Address</label>
-              <input type="email" id="email" placeholder="you@example.com" style={{
+              <input type="email" id="email" name="email" required placeholder="you@example.com" style={{
                 padding: '1rem',
                 borderRadius: '8px',
                 border: '1px solid var(--border-color)',
@@ -43,7 +44,7 @@ const Contact = () => {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <label htmlFor="message" style={{ fontWeight: 'bold', color: 'var(--text-primary)' }}>Your Message</label>
-            <textarea id="message" rows="6" placeholder="Tell me about your project," style={{
+            <textarea id="message" name="message" required rows="6" placeholder="Tell me about your project," style={{
               padding: '1rem',
               borderRadius: '8px',
               border: '1px solid var(--border-color)',
@@ -78,16 +79,21 @@ const Contact = () => {
           </button>
         </form>
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '4rem' }}>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jamespvper123@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
-            <Mail size={24} />
-          </a>
-          <a href="https://www.linkedin.com/in/james-harold-roble-51783b40a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
-            <FaLinkedin size={24} />
-          </a>
-          <a href="https://github.com/dJinz" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
-            <FaGithub size={24} />
-          </a>
+        <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1.5rem' }}>
+            Click the icons if you wish to contact me through other platforms.
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jamespvper123@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
+              <Mail size={24} />
+            </a>
+            <a href="https://www.linkedin.com/in/james-harold-roble-51783b40a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
+              <FaLinkedin size={24} />
+            </a>
+            <a href="https://github.com/dJinz" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
+              <FaGithub size={24} />
+            </a>
+          </div>
         </div>
 
         <p style={{ marginTop: '2rem', textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
