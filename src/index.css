@@ -134,7 +134,7 @@ section {
   .figma-embed-container {
     order: 1;
     width: 100% !important;
-    height: 500px !important;
+    height: 750px !important;
   }
   .nav-btn-prev, .nav-btn-next {
     order: 2;

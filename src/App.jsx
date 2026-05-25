@@ -38,15 +38,25 @@ function App() {
       });
     }, observerOptions);
 
-    // Initial timeout to allow DOM to render
-    const timeoutId = setTimeout(() => {
-      const fadeElements = document.querySelectorAll('.fade-in');
+    const observeElements = () => {
+      // Find all fade-in elements that haven't been observed yet
+      const fadeElements = document.querySelectorAll('.fade-in:not(.is-visible)');
       fadeElements.forEach(el => observer.observe(el));
-    }, 100);
+    };
+
+    // Initial check
+    setTimeout(observeElements, 100);
+
+    // Watch for DOM changes (like Vite HMR or state updates)
+    const mutationObserver = new MutationObserver(() => {
+      observeElements();
+    });
+    
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
 
     return () => {
-      clearTimeout(timeoutId);
       observer.disconnect();
+      mutationObserver.disconnect();
     };
   }, []);
 

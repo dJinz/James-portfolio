@@ -8,12 +8,12 @@ const Hero = () => {
           <h2 style={{ fontSize: '1.5rem', fontWeight: 500, color: 'var(--text-secondary)', marginBottom: '1rem' }}>
             Hello, I'm
           </h2>
-          <h1 className="hero-title" style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '2rem', letterSpacing: '-1.5px' }}>
-            James Harold Roble.<br />
+          <h1 className="hero-title" style={{ fontSize: '3.5rem', fontWeight: 500, lineHeight: 1.1, marginBottom: '2rem', letterSpacing: '-1.5px' }}>
+            James Harold S. Roble<br />
             <span className="hero-subtitle" style={{ color: 'var(--text-secondary)', fontSize: '2.5rem', display: 'block', marginTop: '0.5rem' }}>UI/UX designer, front end dev and Tech Support</span>
           </h1>
-          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', marginBottom: '3rem' }}>
-            An aspiring technical support currently studying IT at Holy Cross of Davao College. I am a passionate designer and developer dedicated to crafting clean, intuitive, and visually stunning interfaces. Welcome to my portfolio.
+          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', marginBottom: '3rem', lineHeight: 1.7 }}>
+            I am a 4th-year BSIT student at Holy Cross of Davao College, an aspiring technical support professional continually gaining hands-on experience. I'm dedicated to learning and improving my skills. Welcome to my portfolio!
           </p>
           <div className="hero-buttons" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="#projects" style={{

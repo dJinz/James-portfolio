@@ -97,7 +97,7 @@ const Contact = () => {
         </div>
 
         <p style={{ marginTop: '2rem', textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-          © 2026 - Roble JH
+          © 2026 - Roble JH. All rights reserved.
         </p>
       </div>
     </section>
