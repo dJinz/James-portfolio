@@ -170,7 +170,7 @@ const Projects = () => {
         <div className="fade-in" style={{ animationDelay: '0.4s', maxWidth: '1000px', margin: '6rem auto 0' }}>
           <h3 className="section-title" style={{ marginBottom: '3rem', textAlign: 'center', fontSize: '2.5rem' }}>Development Projects</h3>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem' }}>
             {devProjects.map((project, idx) => (
               <div 
                 key={idx}
@@ -214,8 +214,8 @@ const Projects = () => {
                       src={project.image} 
                       alt={project.title}
                       style={{
-                        maxWidth: '90%',
-                        maxHeight: '90%',
+                        width: '100%',
+                        height: '100%',
                         objectFit: 'contain',
                         transform: hoveredCardIndex === idx ? 'scale(1.05)' : 'scale(1)',
                         transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)'
@@ -377,7 +377,7 @@ const Projects = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '2rem',
+          padding: 'clamp(1rem, 5vw, 2rem)',
           animation: 'fadeIn 0.3s ease'
         }}
         onClick={() => setDemoVideoUrl(null)}

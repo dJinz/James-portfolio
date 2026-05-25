@@ -10,7 +10,7 @@ const Hero = () => {
           </h2>
           <h1 className="hero-title" style={{ fontSize: '3.5rem', fontWeight: 500, lineHeight: 1.1, marginBottom: '2rem', letterSpacing: '-1.5px' }}>
             James Harold S. Roble<br />
-            <span className="hero-subtitle" style={{ color: 'var(--text-secondary)', fontSize: '2.5rem', display: 'block', marginTop: '0.5rem' }}>UI/UX designer, front end dev and Tech Support</span>
+            <span className="hero-subtitle" style={{ color: 'var(--text-secondary)', fontSize: '2.5rem', display: 'block', marginTop: '0.5rem' }}>IT Student and aspiring Tech Support</span>
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', marginBottom: '3rem', lineHeight: 1.7 }}>
             I am a 4th-year BSIT student at Holy Cross of Davao College, an aspiring technical support professional continually gaining hands-on experience. I'm dedicated to learning and improving my skills. Welcome to my portfolio!

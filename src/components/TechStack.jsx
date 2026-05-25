@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaReact, FaHtml5, FaCss3Alt, FaPython, FaGitAlt, FaGithub, FaFigma } from 'react-icons/fa';
+import { FaReact, FaHtml5, FaCss3Alt, FaPython, FaGitAlt, FaGithub, FaFigma, FaCogs, FaLaptop, FaUsers, FaHeadphones, FaClock } from 'react-icons/fa';
 import { SiJavascript, SiTailwindcss, SiFirebase, SiMysql, SiXampp } from 'react-icons/si';
 
 const TechStack = () => {
@@ -31,6 +31,14 @@ const TechStack = () => {
         { name: 'XAMPP', icon: <SiXampp size={36} color="#FB7A24" /> }
       ] 
     }
+  ];
+
+  const competencies = [
+    { name: 'Technical', icon: <FaCogs size={20} /> },
+    { name: 'Computer Literate', icon: <FaLaptop size={20} /> },
+    { name: 'Team Collaboration', icon: <FaUsers size={20} /> },
+    { name: 'Active Listener', icon: <FaHeadphones size={20} /> },
+    { name: 'Time Management', icon: <FaClock size={20} /> }
   ];
 
   return (
@@ -112,6 +120,62 @@ const TechStack = () => {
             </div>
           ))}
         </div>
+        
+        {/* Other Competencies Section */}
+        <div style={{ marginTop: '5rem', textAlign: 'center' }}>
+          <h3 style={{ fontSize: '1.8rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '2.5rem' }}>
+            Professional Competencies
+          </h3>
+          <div style={{ 
+            display: 'flex', 
+            flexWrap: 'wrap', 
+            justifyContent: 'center', 
+            gap: '1.2rem 1.5rem', 
+            maxWidth: '900px', 
+            margin: '0 auto' 
+          }}>
+            {competencies.map((comp, idx) => (
+              <div 
+                key={idx}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.8rem',
+                  backgroundColor: 'var(--bg-primary)',
+                  border: '1px solid var(--border-color)',
+                  borderRadius: '50px',
+                  padding: '0.8rem 1.5rem',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.02)',
+                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                  cursor: 'default'
+                }}
+                onMouseOver={e => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)';
+                  e.currentTarget.style.borderColor = 'var(--text-primary)';
+                }}
+                onMouseOut={e => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.02)';
+                  e.currentTarget.style.borderColor = 'var(--border-color)';
+                }}
+              >
+                <span style={{ color: 'var(--text-primary)', display: 'flex', alignItems: 'center' }}>
+                  {comp.icon}
+                </span>
+                <span style={{ 
+                  color: 'var(--text-primary)', 
+                  fontWeight: 500,
+                  fontSize: '1rem',
+                  letterSpacing: '0.3px'
+                }}>
+                  {comp.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
