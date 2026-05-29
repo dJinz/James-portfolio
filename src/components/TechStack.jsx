@@ -1,35 +1,35 @@
 import React from 'react';
-import { FaReact, FaHtml5, FaCss3Alt, FaPython, FaGitAlt, FaGithub, FaFigma, FaCogs, FaLaptop, FaUsers, FaHeadphones, FaClock } from 'react-icons/fa';
+import { FaReact, FaHtml5, FaCss3Alt, FaPython, FaGitAlt, FaGithub, FaFigma, FaCogs, FaLaptop, FaUsers, FaHeadphones, FaClock, FaHourglassHalf } from 'react-icons/fa';
 import { SiJavascript, SiTailwindcss, SiFirebase, SiMysql, SiXampp } from 'react-icons/si';
 
 const TechStack = () => {
   const skills = [
-    { 
-      category: 'Frontend', 
+    {
+      category: 'Frontend',
       items: [
         { name: 'React', icon: <FaReact size={36} color="#61DAFB" /> },
         { name: 'JavaScript', icon: <SiJavascript size={36} color="#F7DF1E" /> },
         { name: 'HTML5', icon: <FaHtml5 size={36} color="#E34F26" /> },
         { name: 'CSS3', icon: <FaCss3Alt size={36} color="#1572B6" /> },
         { name: 'Tailwind CSS', icon: <SiTailwindcss size={36} color="#06B6D4" /> }
-      ] 
+      ]
     },
-    { 
-      category: 'Backend', 
+    {
+      category: 'Backend',
       items: [
         { name: 'Python', icon: <FaPython size={36} color="#3776AB" /> },
         { name: 'Firebase', icon: <SiFirebase size={36} color="#FFCA28" /> },
         { name: 'MySQL', icon: <SiMysql size={36} color="#4479A1" /> }
-      ] 
+      ]
     },
-    { 
-      category: 'Tools & Design', 
+    {
+      category: 'Tools & Design',
       items: [
         { name: 'Git', icon: <FaGitAlt size={36} color="#F05032" /> },
         { name: 'GitHub', icon: <FaGithub size={36} color="var(--text-primary)" /> },
         { name: 'Figma', icon: <FaFigma size={36} color="#F24E1E" /> },
         { name: 'XAMPP', icon: <SiXampp size={36} color="#FB7A24" /> }
-      ] 
+      ]
     }
   ];
 
@@ -38,7 +38,8 @@ const TechStack = () => {
     { name: 'Computer Literate', icon: <FaLaptop size={20} /> },
     { name: 'Team Collaboration', icon: <FaUsers size={20} /> },
     { name: 'Active Listener', icon: <FaHeadphones size={20} /> },
-    { name: 'Time Management', icon: <FaClock size={20} /> }
+    { name: 'Time Management', icon: <FaClock size={20} /> },
+    { name: 'Patience', icon: <FaHourglassHalf size={20} /> }
   ];
 
   return (
@@ -91,9 +92,9 @@ const TechStack = () => {
         <div className="tech-grid">
           {skills.map((skillGroup, index) => (
             <div key={index} className="tech-card">
-              <h3 style={{ 
-                fontSize: '1.2rem', 
-                padding: '1.5rem 1.2rem', 
+              <h3 style={{
+                fontSize: '1.2rem',
+                padding: '1.5rem 1.2rem',
                 margin: 0,
                 backgroundColor: 'var(--text-primary)',
                 color: 'var(--bg-secondary)',
@@ -107,8 +108,8 @@ const TechStack = () => {
                 {skillGroup.items.map((item, i) => (
                   <div key={i} className="tech-item" title={item.name}>
                     {item.icon}
-                    <span style={{ 
-                      color: 'var(--text-primary)', 
+                    <span style={{
+                      color: 'var(--text-primary)',
                       fontWeight: 500,
                       fontSize: '0.9rem'
                     }}>
@@ -120,26 +121,27 @@ const TechStack = () => {
             </div>
           ))}
         </div>
-        
+
         {/* Other Competencies Section */}
         <div style={{ marginTop: '5rem', textAlign: 'center' }}>
           <h3 style={{ fontSize: '1.8rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '2.5rem' }}>
-            Professional Competencies
+            Other Competencies
           </h3>
-          <div style={{ 
-            display: 'flex', 
-            flexWrap: 'wrap', 
-            justifyContent: 'center', 
-            gap: '1.2rem 1.5rem', 
-            maxWidth: '900px', 
-            margin: '0 auto' 
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gap: '1.2rem 1.5rem',
+            maxWidth: '800px',
+            margin: '0 auto',
+            padding: '0 1rem'
           }}>
             {competencies.map((comp, idx) => (
-              <div 
+              <div
                 key={idx}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
+                  justifyContent: 'center',
                   gap: '0.8rem',
                   backgroundColor: 'var(--bg-primary)',
                   border: '1px solid var(--border-color)',
@@ -163,8 +165,8 @@ const TechStack = () => {
                 <span style={{ color: 'var(--text-primary)', display: 'flex', alignItems: 'center' }}>
                   {comp.icon}
                 </span>
-                <span style={{ 
-                  color: 'var(--text-primary)', 
+                <span style={{
+                  color: 'var(--text-primary)',
                   fontWeight: 500,
                   fontSize: '1rem',
                   letterSpacing: '0.3px'

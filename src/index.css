@@ -27,6 +27,11 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -124,20 +129,28 @@ section {
   /* Projects */
   .project-header {
     flex-direction: column;
-    align-items: flex-start !important;
+    align-items: center !important;
+    text-align: center;
     gap: 1rem;
   }
   .project-presentation {
     flex-wrap: wrap;
     gap: 1.5rem !important;
+    justify-content: center;
   }
   .figma-embed-container {
     order: 1;
     width: 100% !important;
-    height: 750px !important;
+    max-width: 380px !important;
+    height: auto !important;
+    aspect-ratio: 9 / 19.5 !important;
+    margin: 0 auto;
   }
   .nav-btn-prev, .nav-btn-next {
     order: 2;
+  }
+  .dev-projects-grid {
+    gap: 1.5rem !important;
   }
   
   /* Navigation */

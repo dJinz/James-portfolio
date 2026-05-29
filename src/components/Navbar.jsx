@@ -84,6 +84,7 @@ const Navbar = ({ theme, toggleTheme }) => {
       <nav style={{
         position: 'fixed',
         top: 0,
+        left: 0,
         width: '100%',
         zIndex: 100,
         backgroundColor: scrolled || mobileMenuOpen ? 'var(--bg-secondary)' : 'transparent',

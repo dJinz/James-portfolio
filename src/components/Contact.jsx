@@ -79,21 +79,39 @@ const Contact = () => {
           </button>
         </form>
 
-        <div style={{ marginTop: '4rem', textAlign: 'center' }}>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1.5rem' }}>
-            Click the icons if you wish to contact me through other platforms.
+        <div style={{ marginTop: '4rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1.5rem', textAlign: 'center' }}>
+            Click the details below to contact me through other platforms:
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jamespvper123@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
-              <Mail size={24} />
-            </a>
-            <a href="https://www.linkedin.com/in/james-harold-roble-51783b40a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
-              <FaLinkedin size={24} />
-            </a>
-            <a href="https://github.com/dJinz" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
-              <FaGithub size={24} />
-            </a>
-          </div>
+          <ul style={{
+            listStyleType: 'disc',
+            display: 'inline-flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            gap: '1.2rem',
+            paddingLeft: '1.5rem',
+            margin: '0 auto',
+            textAlign: 'left'
+          }}>
+            <li style={{ color: 'var(--text-secondary)' }}>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jamespvper123@gmail.com" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
+                <Mail size={20} style={{ flexShrink: 0 }} />
+                <span style={{ fontSize: '1.05rem', fontWeight: 500 }}>James Roble</span>
+              </a>
+            </li>
+            <li style={{ color: 'var(--text-secondary)' }}>
+              <a href="https://www.linkedin.com/in/james-harold-roble-51783b40a/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
+                <FaLinkedin size={20} style={{ flexShrink: 0 }} />
+                <span style={{ fontSize: '1.05rem', fontWeight: 500 }}>James Harold Roble</span>
+              </a>
+            </li>
+            <li style={{ color: 'var(--text-secondary)' }}>
+              <a href="https://github.com/dJinz" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
+                <FaGithub size={20} style={{ flexShrink: 0 }} />
+                <span style={{ fontSize: '1.05rem', fontWeight: 500 }}>dJinz</span>
+              </a>
+            </li>
+          </ul>
         </div>
 
         <p style={{ marginTop: '2rem', textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>

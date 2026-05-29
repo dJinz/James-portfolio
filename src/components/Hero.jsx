@@ -28,7 +28,7 @@ const Hero = () => {
             }} onMouseOver={e => e.target.style.transform = 'translateY(-2px)'} onMouseOut={e => e.target.style.transform = 'translateY(0)'}>
               View My Work
             </a>
-            <a href="#" style={{
+            <a href="https://canva.link/04d93wnw4h4kl3c" target="_blank" rel="noopener noreferrer" style={{
               display: 'inline-block',
               padding: '1rem 2rem',
               backgroundColor: 'transparent',

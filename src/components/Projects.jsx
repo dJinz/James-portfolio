@@ -15,9 +15,10 @@ const Projects = () => {
     {
       title: 'InternConnect',
       category: 'Web Development',
-      description: 'A comprehensive internship portal built to seamlessly connect student applicants with partner industries. Features robust student applications, secure industrial verification, time tracking logs, and a clean professional UI dashboard.',
+      description: 'An internship portal connecting students with partner industries. It tracks student applications, manages industrial verification, and logs daily internship hours.',
       techStack: ['PHP', 'MySQL', 'JavaScript', 'Ajax', 'jQuery', 'HTML/CSS'],
       image: internConnectLogo,
+      imageBg: '#ffffff',
       githubUrl: 'https://github.com/WqNTqP/InternConnect',
       demoUrl: 'https://drive.google.com/file/d/1gpHZHUzzxDe8VJsoZfXeYMBCe6XoBOFy/preview',
       demoOriginalUrl: 'https://drive.google.com/file/d/1gpHZHUzzxDe8VJsoZfXeYMBCe6XoBOFy/view?usp=drivesdk'
@@ -25,7 +26,7 @@ const Projects = () => {
     {
       title: 'DTR-App',
       category: 'Web Application',
-      description: 'An employee Daily Time Record (DTR) tracking system facilitating effortless real-time clock-in/out logging, monthly attendance summaries, and responsive tracking metrics.',
+      description: 'An employee Daily Time Record (DTR) tracker. It features real-time clock-in/out logging, monthly attendance summaries, and responsive tracking metrics.',
       techStack: ['React', 'Firebase'],
       image: null,
       githubUrl: null,
@@ -167,10 +168,10 @@ const Projects = () => {
         </div>
 
         {/* Development Projects */}
-        <div className="fade-in" style={{ animationDelay: '0.4s', maxWidth: '1000px', margin: '6rem auto 0' }}>
+        <div className="fade-in" style={{ animationDelay: '0.4s', maxWidth: '1100px', margin: '6rem auto 0' }}>
           <h3 className="section-title" style={{ marginBottom: '3rem', textAlign: 'center', fontSize: '2.5rem' }}>Development Projects</h3>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '3rem' }}>
             {devProjects.map((project, idx) => (
               <div 
                 key={idx}
@@ -178,9 +179,9 @@ const Projects = () => {
                   backgroundColor: 'var(--bg-primary)',
                   border: '1px solid var(--border-color)',
                   borderRadius: '24px',
-                  padding: '2rem',
+                  padding: '2.2rem',
                   boxShadow: hoveredCardIndex === idx 
-                    ? '0 20px 40px rgba(0,0,0,0.1)' 
+                    ? '0 25px 50px rgba(0,0,0,0.12)' 
                     : '0 10px 30px rgba(0,0,0,0.05)',
                   transform: hoveredCardIndex === idx 
                     ? 'translateY(-8px)' 
@@ -198,8 +199,8 @@ const Projects = () => {
                 {/* Project Showcase Image */}
                 <div style={{
                   width: '100%',
-                  height: '180px',
-                  backgroundColor: 'var(--bg-secondary)',
+                  height: '230px',
+                  backgroundColor: project.imageBg || 'var(--bg-secondary)',
                   borderRadius: '16px',
                   overflow: 'hidden',
                   marginBottom: '1.5rem',
@@ -217,20 +218,72 @@ const Projects = () => {
                         width: '100%',
                         height: '100%',
                         objectFit: 'contain',
+                        padding: '1.5rem',
+                        boxSizing: 'border-box',
                         transform: hoveredCardIndex === idx ? 'scale(1.05)' : 'scale(1)',
                         transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)'
                       }}
                     />
                   ) : (
                     <div style={{
-                      fontSize: '0.9rem',
-                      color: 'var(--text-secondary)',
+                      width: '100%',
+                      height: '100%',
+                      background: 'linear-gradient(135deg, #1e1e24, #121216)',
+                      padding: '1.5rem',
+                      boxSizing: 'border-box',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between',
                       fontFamily: 'monospace',
-                      opacity: 0.65,
-                      textTransform: 'uppercase',
-                      letterSpacing: '1px'
+                      fontSize: '0.85rem',
+                      color: 'var(--text-secondary)'
                     }}>
-                      [Not Available]
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-color)', paddingBottom: '0.6rem' }}>
+                        <span style={{ color: '#3b82f6', fontWeight: 700, letterSpacing: '0.5px' }}>DTR TRACKER</span>
+                        <span style={{ color: '#10b981', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 600 }}>
+                          <span style={{ width: '8px', height: '8px', backgroundColor: '#10b981', borderRadius: '50%', display: 'inline-block' }}></span>
+                          Active
+                        </span>
+                      </div>
+                      
+                      <div style={{ textAlign: 'center', margin: '1rem 0' }}>
+                        <div style={{ fontSize: '1.8rem', fontWeight: 'bold', color: 'var(--text-primary)', letterSpacing: '1px', marginBottom: '0.2rem' }}>09:00:00 AM</div>
+                        <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', opacity: 0.8 }}>MAY 29, 2026</div>
+                      </div>
+                      
+                      <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center' }}>
+                        <div style={{
+                          padding: '0.5rem',
+                          background: 'rgba(59, 130, 246, 0.1)',
+                          border: '1px solid rgba(59, 130, 246, 0.3)',
+                          color: '#60a5fa',
+                          borderRadius: '8px',
+                          fontWeight: 700,
+                          fontSize: '0.75rem',
+                          textAlign: 'center',
+                          flex: 1
+                        }}>
+                          CLOCK IN
+                        </div>
+                        <div style={{
+                          padding: '0.5rem',
+                          background: 'rgba(255,255,255,0.03)',
+                          border: '1px solid var(--border-color)',
+                          color: 'var(--text-secondary)',
+                          opacity: 0.5,
+                          borderRadius: '8px',
+                          fontSize: '0.75rem',
+                          textAlign: 'center',
+                          flex: 1
+                        }}>
+                          CLOCK OUT
+                        </div>
+                      </div>
+                      
+                      <div style={{ fontSize: '0.75rem', borderTop: '1px solid var(--border-color)', paddingTop: '0.6rem', display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+                        <span>Logs: 2 active sessions</span>
+                        <span style={{ color: '#3b82f6' }}>View metrics</span>
+                      </div>
                     </div>
                   )}
                 </div>
