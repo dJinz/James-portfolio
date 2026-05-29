@@ -171,7 +171,7 @@ const Projects = () => {
         <div className="fade-in" style={{ animationDelay: '0.4s', maxWidth: '1100px', margin: '6rem auto 0' }}>
           <h3 className="section-title" style={{ marginBottom: '3rem', textAlign: 'center', fontSize: '2.5rem' }}>Development Projects</h3>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '3rem' }}>
+          <div className="dev-projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '3rem' }}>
             {devProjects.map((project, idx) => (
               <div 
                 key={idx}
@@ -424,62 +424,63 @@ const Projects = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(0,0,0,0.85)',
+          backgroundColor: 'rgba(0,0,0,0.9)',
           backdropFilter: 'blur(10px)',
           zIndex: 1000,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: 'clamp(1rem, 5vw, 2rem)',
+          padding: 'clamp(1rem, 5vw, 3rem)',
           animation: 'fadeIn 0.3s ease'
         }}
         onClick={() => setDemoVideoUrl(null)}
         >
+          {/* Close Button (Outside the video container to prevent overlap) */}
+          <button 
+            onClick={() => setDemoVideoUrl(null)}
+            style={{
+              position: 'absolute',
+              top: '1.5rem',
+              right: '1.5rem',
+              background: 'rgba(255,255,255,0.1)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              color: '#fff',
+              borderRadius: '50%',
+              width: '3.2rem',
+              height: '3.2rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              transition: 'all 0.2s',
+              zIndex: 1005
+            }}
+            onMouseOver={e => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.2)';
+              e.currentTarget.style.transform = 'scale(1.05)';
+            }}
+            onMouseOut={e => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
+            aria-label="Close modal"
+          >
+            <span style={{ fontSize: '2rem', fontWeight: 'normal', lineHeight: 0 }}>&times;</span>
+          </button>
+
           <div style={{
             position: 'relative',
             width: '100%',
             maxWidth: '900px',
             aspectRatio: '16/9',
             backgroundColor: '#000',
-            borderRadius: '24px',
+            borderRadius: '16px',
             overflow: 'hidden',
             boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)',
             border: '1px solid rgba(255,255,255,0.1)'
           }}
           onClick={e => e.stopPropagation()}
           >
-            {/* Close Button */}
-            <button 
-              onClick={() => setDemoVideoUrl(null)}
-              style={{
-                position: 'absolute',
-                top: '1.5rem',
-                right: '1.5rem',
-                background: 'rgba(255,255,255,0.15)',
-                border: '1px solid rgba(255,255,255,0.2)',
-                color: '#fff',
-                borderRadius: '50%',
-                width: '3rem',
-                height: '3rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                cursor: 'pointer',
-                transition: 'all 0.2s',
-                zIndex: 1001
-              }}
-              onMouseOver={e => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.3)';
-                e.currentTarget.style.transform = 'scale(1.05)';
-              }}
-              onMouseOut={e => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.15)';
-                e.currentTarget.style.transform = 'scale(1)';
-              }}
-            >
-              <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>&times;</span>
-            </button>
-
             <iframe
               src={demoVideoUrl}
               style={{ border: 'none', width: '100%', height: '100%' }}

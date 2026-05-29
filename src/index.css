@@ -160,6 +160,14 @@ section {
   .mobile-controls {
     display: flex !important;
   }
+  .submit-btn {
+    width: 100% !important;
+  }
+}
+
+.submit-btn {
+  width: auto;
+  min-width: 180px;
 }
 
 /* Mobile Nav Dropdown */

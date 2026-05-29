@@ -64,7 +64,7 @@ const TechStack = () => {
           }
           .tech-items-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
             gap: 2rem 1rem;
             padding: 2.5rem 1.5rem;
           }
@@ -129,7 +129,7 @@ const TechStack = () => {
           </h3>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))',
             gap: '1.2rem 1.5rem',
             maxWidth: '800px',
             margin: '0 auto',
