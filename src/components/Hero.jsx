@@ -1,4 +1,5 @@
 import React from 'react';
+import jamespfp from '../assets/jamespfp.png';
 
 const Hero = () => {
   return (
@@ -45,7 +46,7 @@ const Hero = () => {
         </div>
         <div className="hero-image-container" style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center' }}>
           <img
-            src="/hero-image.png"
+            src={jamespfp}
             alt="James Harold Roble"
             style={{
               width: '100%',
