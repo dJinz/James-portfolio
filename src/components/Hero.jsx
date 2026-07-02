@@ -11,10 +11,10 @@ const Hero = () => {
           </h2>
           <h1 className="hero-title" style={{ fontSize: '3.5rem', fontWeight: 500, lineHeight: 1.1, marginBottom: '2rem', letterSpacing: '-1.5px' }}>
             James Harold S. Roble<br />
-            <span className="hero-subtitle" style={{ color: 'var(--text-secondary)', fontSize: '2.5rem', display: 'block', marginTop: '0.5rem' }}>IT Student and aspiring Tech Support</span>
+            <span className="hero-subtitle" style={{ color: 'var(--text-secondary)', fontSize: '2.5rem', display: 'block', marginTop: '0.5rem' }}>Bachelor of Science in Information Technology Graduate | Aspiring IT Professional</span>
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', marginBottom: '3rem', lineHeight: 1.7 }}>
-            I am a 4th-year BSIT student at Holy Cross of Davao College, an aspiring technical support professional continually gaining hands-on experience. I'm dedicated to learning and improving my skills. Welcome to my portfolio!
+            I am a graduate of Holy Cross of Davao College with a strong foundation in technical support, networking, system troubleshooting, and software development. Passionate about technology and continuous learning, I am dedicated to building practical expertise and delivering effective IT solutions. Welcome to my portfolio, where I showcase my skills, projects, and experiences as I pursue opportunities in the information technology industry.
           </p>
           <div className="hero-buttons" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="#projects" style={{
