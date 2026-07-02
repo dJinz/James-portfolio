@@ -4,7 +4,7 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      year: '2026 - Present',
+      year: 'Feb 2026 - June 2026',
       role: 'Technical Support',
       company: 'Holy Cross of Davao College',
       description: 'Providing comprehensive IT support for students, faculty, and administrative staff. Responsibilities include diagnosing hardware and software issues, maintaining network infrastructure, and ensuring the smooth operation of all technical equipment across the campus.',
