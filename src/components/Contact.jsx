@@ -25,7 +25,7 @@ const Contact = () => {
     setStatus({ submitting: true, success: false, error: null });
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/jamespvper123@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/roblejamesharold@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const Contact = () => {
       <div className="fade-in" style={{ width: '100%', maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
         <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '1rem', color: 'var(--text-primary)' }}>Contact Form</h2>
         <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2.5rem' }}>
-          Please contact me directly at <span style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>jamespvper123@gmail.com</span> or drop your info here.
+          Please contact me directly at <span style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>roblejamesharold@gmail.com</span> or drop your info here.
         </p>
 
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
